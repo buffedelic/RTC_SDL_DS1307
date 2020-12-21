@@ -1,4 +1,7 @@
+# 2020-12-21 Added Python3 support, backward compatible with Python2
+
 Raspberry Pi Python Library for DS1307 RTC
+
 
 SwitchDoc Labs, LLC  July 21, 2014
 

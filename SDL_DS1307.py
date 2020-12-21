@@ -1,9 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # SDL_DS1307.py Python Driver Code
 # SwitchDoc Labs 07/10/2014
 # Shovic V 1.0
 # only works in 24 hour mode
+
+#
+# Added python3 support
+# Christofer Andersson
+# 21/12/2020
+#
 
 # original code from below (DS1307 Code originally - had issues with 24 hour mode.  Removed 12 hour mode)
 
@@ -30,6 +36,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+from builtins import object
 from datetime import datetime
 
 import smbus
@@ -45,7 +52,7 @@ def _bcd_to_int(bcd):
                 out += p
             d >>= 1
         out *= 10
-    return out / 10
+    return int(out / 10)
 
 
 def _int_to_bcd(n):
@@ -61,7 +68,7 @@ def _int_to_bcd(n):
     return bcd >> 1
 
 
-class SDL_DS1307():
+class SDL_DS1307(object):
     _REG_SECONDS = 0x00
     _REG_MINUTES = 0x01
     _REG_HOURS = 0x02
@@ -99,8 +106,8 @@ class SDL_DS1307():
 
     def _read_hours(self):
         d = self._read(self._REG_HOURS)
-	if (d == 0x64):
-		d = 0x40
+        if d == 0x64:
+            d = 0x40
         return _bcd_to_int(d & 0x3F)
 
 
