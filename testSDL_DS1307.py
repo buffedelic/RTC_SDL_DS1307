@@ -27,7 +27,7 @@ import SDL_DS1307
 # Main Program
 
 print("")
-print("Test SDL_DS1307 Version 1.0 - SwitchDoc Labs")
+print("Test SDL_DS1307 Version 1.1 - Christofer Andersson")
 print("")
 print("")
 print("Program Started at:"+ time.strftime("%Y-%m-%d %H:%M:%S"))
