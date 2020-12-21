@@ -1,4 +1,4 @@
-# 2020-12-21 Added Python3 support, backward compatible with Python2
+# 2020-12-21 Added Python3 support
 
 Raspberry Pi Python Library for DS1307 RTC
 
