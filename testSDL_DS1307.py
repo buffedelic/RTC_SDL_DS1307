@@ -4,6 +4,10 @@
 # John C. Shovic, SwitchDoc Labs
 # 07/10/2014
 #
+# Added python3 support
+# Christofer Andersson
+# 21/12/2020
+#
 # Evaluation of the following RTC Clocks
 #
 #	DS1307
