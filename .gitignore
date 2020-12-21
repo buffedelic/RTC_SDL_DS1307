@@ -6,3 +6,5 @@
 *.temp
 *.test
 *nohup.out
+.vscode/*
+*.py.bak
